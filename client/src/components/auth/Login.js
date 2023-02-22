@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 
-const Login = ({ login, isAuthenticated }) => {
+const Login = ({ login, isAuthenticated, user }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -21,7 +21,13 @@ const Login = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" />;
+    if(user) {
+      if(user.isAdmin) {
+        return <Navigate to="/contact_admin" />;
+      }
+      else
+        return <Navigate to="/" />;
+    }
   }
 
   return (
@@ -61,11 +67,13 @@ const Login = ({ login, isAuthenticated }) => {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
+  isAuthenticated: PropTypes.bool,
+  user: PropTypes.object
 };
 
 const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user
 });
 
 export default connect(mapStateToProps, { login })(Login);

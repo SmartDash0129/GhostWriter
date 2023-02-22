@@ -8,16 +8,28 @@ const Navbar = ({ auth, logout }) => {
   const authLinksUser = (
     <ul>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about">
+          <i className="fa fa-image" />{' '}
+          <span className="hide-sm">About</span>
+        </Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">
+          <i className="fa fa-vcard" />{' '}
+          <span className="hide-sm">Contact</span>
+        </Link>
       </li>
       <li>
-        <Link to="/pricing">Pricing</Link>
+        <Link to="/pricing">
+          <i className="fa fa-fax" />{' '}
+          <span className="hide-sm">Pricing</span>
+        </Link>
       </li>
       <li>
-        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/dashboard">
+          <i className="fa fa-dashboard" />{' '}
+          <span className="hide-sm">Dashboard</span>
+        </Link>
       </li>
       <li>
         <Link to="/profile">
@@ -37,10 +49,16 @@ const Navbar = ({ auth, logout }) => {
   const authLinksAdmin = (
     <ul>
       <li>
-        <Link to="/contact_admin">Contact</Link>
+        <Link to="/contact_admin">
+          <i className="fa fa-vcard" />{' '}
+          <span className="hide-sm">Contact</span>
+        </Link>
       </li>
       <li>
-        <Link to="/tuning_data">Fine-Tuning Data</Link>
+        <Link to="/tuning_data">
+          <i className="fa fa-sticky-note" />{' '}
+          <span className="hide-sm">Fine-Tuning Data</span>
+        </Link>
       </li>
       <li>
         <Link to="/profile">
@@ -49,7 +67,7 @@ const Navbar = ({ auth, logout }) => {
         </Link>
       </li>
       <li>
-        <a onClick={logout} href="#!">
+        <a onClick={logout} href="/login">
           <i className="fas fa-sign-out-alt" />{' '}
           <span className="hide-sm">Logout</span>
         </a>

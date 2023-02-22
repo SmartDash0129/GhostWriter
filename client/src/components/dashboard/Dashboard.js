@@ -7,7 +7,7 @@ const Dashboard = ( {auth: { user }} ) => {
   return (
     <section className="container">
       <h1 className="large text-primary text-center">Dashboard</h1>
-      
+      <p className="small">Welcome to <span className="lead text-primary b">{user.name}</span>!</p>
     </section>
   );
 };

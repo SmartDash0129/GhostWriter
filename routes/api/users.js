@@ -81,4 +81,57 @@ router.post(
   }
 );
 
+// @route    PUT api/users
+// @desc     update user
+// @access   Public
+router.put(
+  '/',
+  check('name', 'Name is required').notEmpty(),
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { name, email, currentPassword, newPassword } = req.body;
+
+    try {
+      let user = await User.findOne({ email });
+      
+      const isMatch = await bcrypt.compare(currentPassword, user.password);
+
+      if (!isMatch) {
+        return res
+          .status(400)
+          .json({ errors: [{ msg: 'Invalid Credentials' }] });
+      }
+      else {
+        if(newPassword) {
+          if(newPassword.length < 6) {
+            return res
+              .status(400)
+              .json({ errors: [{ msg: 'New password must be at least 6 characters!' }] });
+          }
+          else {
+            const filter = {email};
+            const salt = await bcrypt.genSalt(10);
+            password = await bcrypt.hash(newPassword, salt);
+            const update = {name, password};
+            let updateUser = await User.findOneAndUpdate(filter, update);
+            res.json({data: "success"});
+          }
+        }
+        else {
+          const filter = {email};
+          const update = {name};
+          let updateUser = await User.findOneAndUpdate(filter, update);
+          res.json({data: "success"});
+        }
+      }
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server error');
+    }
+  }
+);
 module.exports = router;
