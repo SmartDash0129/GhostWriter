@@ -6,7 +6,10 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
+
 import About from './components/static/About';
+import Contact from './components/static/Contact';
+
 import Footer from './components/layout/Footer';
 import NotFound from './components/layout/NotFound';
 import PrivateRoute from './components/routing/PrivateRoute';
@@ -47,13 +50,14 @@ const App = () => {
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
           <Route
             path="dashboard"
             element={<PrivateRoute component={Dashboard} />}
           />
           <Route path="/*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </Provider>
   );

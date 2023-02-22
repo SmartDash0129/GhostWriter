@@ -12,7 +12,7 @@ const About = ({isAuthenticated}) => {
         {/* <!-------------------------- Paragraph 1 --------------------------- --> */}
         <br /><br /><br /><br />
         <div className="text-center">
-            <div className="large b py-1">
+            <div className="large b py-1 text-primary">
                 About
             </div>
             <div>
