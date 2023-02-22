@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #998bb9;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -97,9 +97,26 @@ img {
 .p-3 {
   padding: 3rem;
 }
+.p-4 {
+  padding: 4rem;
+}
 .py {
   padding: 0.5rem 0;
 }
+
+.px-1 {
+  padding: 0 1rem;
+}
+.px-2 {
+  padding: 0 2rem;
+}
+.px-3 {
+  padding: 0 3rem;
+}
+.px-4 {
+  padding: 0 4rem;
+}
+
 .py-1 {
   padding: 1rem 0;
 }
@@ -109,7 +126,9 @@ img {
 .py-3 {
   padding: 3rem 0;
 }
-
+.py-4 {
+  padding: 4rem 0;
+}
 /* Margin */
 .m {
   margin: 0.5rem;
@@ -140,6 +159,19 @@ img {
   display: inline-block;
   background: var(--light-color);
   color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-reverse {
+  display: inline-block;
+  background: var(--dark-color);
+  color: #eee;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -643,5 +675,77 @@ button {
 @media (max-width: 700px) {
   .footer-container {
     flex-direction: column;
+  }
+}
+
+/* -------------------------------------------- About page ------------------------------------ */
+
+.section_content{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  color: black;
+}
+
+.content_2_1 {
+  width: 50%; 
+}
+
+.content_2_2 {
+  width: 50%;
+}
+
+.content_3_1 {
+  width: 80%;
+}
+.content_3_2 {
+  width: 20%;
+}
+
+.content_4_1 {
+  width: 10%;
+}
+.content_4_2 {
+  width: 45%;
+}
+.content_4_3 {
+  width: 45%;
+}
+
+.content_5_1 {
+  width: 75%;
+}
+.content_5_2 {
+  width: 25%;
+}
+
+.content_6_1 {
+  width: 50%;
+}
+.content_6_2 {
+  width: 50%;
+}
+
+img.inner-fill {
+  width: 100%;
+}
+
+.tab-1 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.tab-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .section_content {
+      flex-direction: column;       
+  }
+  .content_2_1, .content_2_2, .content_3_1, .content_3_2, .content_4_1, .content_4_2, .content_4_3, .content_5_1, .content_5_2, .content_6_1, .content_6_2 {
+      width: 100%;
   }
 }

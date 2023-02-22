@@ -78,10 +78,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={onChange}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input type="submit" className="btn btn-success" value="Register" />
       </form>
       <p className="my-1">
-        Already have an account? <Link to="/login">Sign In</Link>
+        Already have an account? <Link to="/login" className="b">Sign In</Link>
       </p>
     </section>
   );
