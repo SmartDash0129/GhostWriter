@@ -1,25 +1,31 @@
-import React from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
+// import { Link, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { sendMessage } from '../../actions/contact';
 
-const Contact = ({isAuthenticated}) => {
+const Contact = ({isAuthenticated, sendMessage }) => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const { name, email, message } = formData;
     const onChange = (e) => {
-
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        sendMessage(formData);
+        setFormData({ ...formData, name: '', email: '', message: '' });
     };
-    if (!isAuthenticated) {
-        // return <Navigate to="/login" />;
-    }
     return (
         <div>
-            <section className="container">
+            <section className="container-small">
                 <h1 className="large text-primary text-center">Any Questions?</h1>
                 <p className="lead text-center b">
-                    <i className="fas fa-user" /> Get in touch
+                    <i className="fas fa-user" /> Get in touch with me!
                 </p>
                 <form className="form" onSubmit={onSubmit}>
                     <div className="form-group">
@@ -27,7 +33,7 @@ const Contact = ({isAuthenticated}) => {
                             type="text"
                             placeholder="Name"
                             name="name"
-                            value={"admin"}
+                            value={name}
                             onChange={onChange}
                         />
                     </div>
@@ -36,12 +42,18 @@ const Contact = ({isAuthenticated}) => {
                             type="email"
                             placeholder="Email Address"
                             name="email"
-                            value={"email"}
+                            value={email}
                             onChange={onChange}
                         />
                     </div>
                     <div className="form-group">
-                        <textarea style={{height: "20rem"}}></textarea>
+                        <textarea 
+                            style={{height: "20rem"}}
+                            name="message"
+                            value={message}
+                            onChange={onChange}
+                            placeholder="Message ..."
+                        />
                     </div>
                     <div className="text-center">
                         <input type="submit" className="btn btn-success" value="Submit" />
@@ -53,11 +65,12 @@ const Contact = ({isAuthenticated}) => {
 };
 
 Contact.propTypes = {
-    isAuthenticated: PropTypes.bool
+    isAuthenticated: PropTypes.bool,
+    sendMessage: PropTypes.func
 };
 
 const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(mapStateToProps)(Contact);
+export default connect(mapStateToProps, {sendMessage})(Contact);

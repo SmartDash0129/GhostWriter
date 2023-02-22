@@ -32,9 +32,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   return (
-    <section className="container">
-      <h1 className="large text-primary">Sign Up</h1>
-      <p className="lead">
+    <section className="container-small">
+      <h1 className="large text-primary text-center">Sign Up</h1>
+      <p className="lead text-center">
         <i className="fas fa-user" /> Create Your Account
       </p>
       <form className="form" onSubmit={onSubmit}>

@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const Dashboard = ( {auth: { user }} ) => {
   return (
     <section className="container">
-      <h1 className="large text-primary">Dashboard</h1>
+      <h1 className="large text-primary text-center">Dashboard</h1>
       
     </section>
   );
