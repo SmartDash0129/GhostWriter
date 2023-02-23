@@ -58,7 +58,9 @@ const Login = ({ login, isAuthenticated, user }) => {
             minLength="6"
           />
         </div>
-        <input type="submit" className="btn btn-success" value="Login" />
+        <div className="text-center">
+          <input type="submit" className="btn btn-success" value="Login" />
+        </div>
       </form>
       <p className="my-1">
         Don't have an account? <Link to="/register">Sign Up</Link>
