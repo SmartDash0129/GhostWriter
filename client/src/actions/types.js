@@ -10,3 +10,6 @@ export const LOGOUT = 'LOGOUT';
 export const GET_REPOS = 'GET_REPOS';
 export const NO_REPOS = 'NO_REPOS';
 export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';
+
+export const QA_ADD = 'QA_ADD';
+export const QA_CLEAN = 'QA_CLEAN';

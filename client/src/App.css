@@ -768,3 +768,56 @@ img.inner-fill {
       width: 100%;
   }
 }
+
+/* ------------------------------  Dashboard Setting ----------------------------------- */
+.dashboard-container {
+  display: flex;
+  direction: row;
+  /* justify-content: space-around; */
+  width: 100%;
+  max-height: 100%;
+  background-color: #231d3ec2;
+  border-radius: 1rem;
+}
+.dashboard-left {
+  width: 30%;
+  border-right: solid 0.2rem #888;
+}
+.dashboard-right {
+  width: 70%;
+  height: 660px;
+  /* max-height: 750px; */
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .dashboard-container {
+      flex-direction: column;       
+  }
+  .dashboard-left {
+    border-bottom: solid 0.2rem #888;
+    border-right: none;
+    width: 100%;
+  }
+  .dashboard-right {
+    width: 100%;
+  }
+}
+textarea.prompt {
+  width: 90%;
+  background-color: #1d1818;
+  height: 150px;
+  overflow-y: auto;
+  border-radius: 0.5rem;
+  color: white;
+}
+.question-cotainer {
+  background-color: #1d1818;
+  width: 100%;
+  border-radius: 0.4rem;
+}
+.answer-container {
+  background-color:#201b37;
+  width: 100%;
+  border-radius: 0.4rem;
+}

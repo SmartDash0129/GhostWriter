@@ -3,6 +3,7 @@ import spinner from './spinner.gif';
 
 const Spinner = () => (
   <Fragment>
+    <br /><br /><br />
     <img
       src={spinner}
       style={{ width: '200px', margin: 'auto', display: 'block' }}
