@@ -25,7 +25,7 @@ const About = ({isAuthenticated}) => {
             {/* <!-------------------------- Paragraph 2 --------------------------- --> */}
             <div className="section_content">
                 <div className="content_2_1">
-                    <img src="assets/img/closeup-portrait-of-a-male-hand-writing-on-a-paper-SBI-300855399-1024x683.png" className="inner-fill" />
+                    <img src="assets/img/closeup-portrait-of-a-male-hand-writing-on-a-paper-SBI-300855399-1024x683.png" alt="img_1" className="inner-fill" />
                 </div>
                 <div className="content_2_2">
                     <div className="tab-1">AI songwriting has the potential to revolutionize the music 
@@ -66,7 +66,7 @@ const About = ({isAuthenticated}) => {
                     </div>
                 </div>
                 <div className="content_3_2">
-                    <img src="assets/img/com0p.png" className="inner-fill" /> 
+                    <img src="assets/img/com0p.png" alt="img_2" className="inner-fill" /> 
                 </div>
             </div>
 
@@ -75,7 +75,7 @@ const About = ({isAuthenticated}) => {
             {/* <!-------------------------- Paragraph 4 --------------------------- --> */}
             <div className="section_content">
                 <div className="content_4_1">
-                    <img src="assets/img/fire-icon-black.png" className="inner-fill" />
+                    <img src="assets/img/fire-icon-black.png" alt="img_3" className="inner-fill" />
                 </div>
                 <div className="content_4_2">
                     <div className="tab-1">
@@ -104,7 +104,7 @@ const About = ({isAuthenticated}) => {
                     </div>
                 </div>
                 <div className="content_5_2">
-                    <img src="assets/img/vector-drum-kit-SBI-300126431-1024x930.png" className="inner-fill" />
+                    <img src="assets/img/vector-drum-kit-SBI-300126431-1024x930.png" alt="img_4" className="inner-fill" />
                 </div>
             </div>
 
@@ -113,7 +113,7 @@ const About = ({isAuthenticated}) => {
             {/* <!-------------------------- Paragraph 6 --------------------------- --> */}
             <div className="section_content">
                 <div className="content_6_1">
-                    <img src="assets/img/frustrated-businessman-sitting-at-the-table-with-hands-on-face-over-gray-background-SBI-300854492-1024x679.png" className="inner-fill" />
+                    <img src="assets/img/frustrated-businessman-sitting-at-the-table-with-hands-on-face-over-gray-background-SBI-300854492-1024x679.png" alt="img_5" className="inner-fill" />
                 </div>
                 <div className="content_6_2">
                     <div className="tab-1">

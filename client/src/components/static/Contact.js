@@ -29,6 +29,7 @@ const Contact = ({isAuthenticated, sendMessage }) => {
                 </p>
                 <form className="form" onSubmit={onSubmit}>
                     <div className="form-group">
+                        <div className="lead text-primary b">Name :</div>
                         <input
                             type="text"
                             placeholder="Name"
@@ -38,6 +39,7 @@ const Contact = ({isAuthenticated, sendMessage }) => {
                         />
                     </div>
                     <div className="form-group">
+                        <div className="lead text-primary b">Email :</div>
                         <input
                             type="email"
                             placeholder="Email Address"
@@ -47,8 +49,9 @@ const Contact = ({isAuthenticated, sendMessage }) => {
                         />
                     </div>
                     <div className="form-group">
+                        <div className="lead text-primary b">Message :</div>
                         <textarea 
-                            style={{height: "20rem"}}
+                            style={{height: "17rem"}}
                             name="message"
                             value={message}
                             onChange={onChange}

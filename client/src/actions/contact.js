@@ -3,7 +3,8 @@ import { setAlert } from './alert';
 
 export const sendMessage = (formData) => async (dispatch) => {
     try {
-        const res = await api.post('/contact', formData);
+        // const res = await api.post('/contact', formData);
+        await api.post('/contact', formData);
   
         dispatch(setAlert("Your message sent successfully!", 'success'));
     } catch (err) {

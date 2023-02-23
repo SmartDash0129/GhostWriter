@@ -38,6 +38,7 @@ const Login = ({ login, isAuthenticated, user }) => {
       </p>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
+          <div className="lead text-primary b">Email :</div>
           <input
             type="email"
             placeholder="Email Address"
@@ -47,6 +48,7 @@ const Login = ({ login, isAuthenticated, user }) => {
           />
         </div>
         <div className="form-group">
+          <div className="lead text-primary b">Password :</div>
           <input
             type="password"
             placeholder="Password"
@@ -61,6 +63,7 @@ const Login = ({ login, isAuthenticated, user }) => {
       <p className="my-1">
         Don't have an account? <Link to="/register">Sign Up</Link>
       </p>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </section>
   );
 };

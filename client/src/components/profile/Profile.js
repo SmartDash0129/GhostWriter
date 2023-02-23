@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { modifyProfile } from '../../actions/profile';
 import PropTypes from 'prop-types';
@@ -34,7 +34,7 @@ const Profile = ( {setAlert, modifyProfile, isAuthenticated, user} ) => {
                 modifyProfile({name, email, currentPassword});
             }
             else {
-                if(newPassword != newConfirmPassword) {
+                if(newPassword !== newConfirmPassword) {
                     setAlert("New password didn't match!", "danger");
                 }
                 else{
@@ -51,7 +51,7 @@ const Profile = ( {setAlert, modifyProfile, isAuthenticated, user} ) => {
       </p>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
-            <div className="lead">Name :</div>
+            <div className="lead text-primary b">Name :</div>
             <input
                 type="text"
                 placeholder="Name"
@@ -61,9 +61,10 @@ const Profile = ( {setAlert, modifyProfile, isAuthenticated, user} ) => {
             />
         </div>
         <div className="form-group">
-            <div className="lead">Email :</div>
+            <div className="lead text-primary b">Email :</div>
             <input
                 type="email"
+                style={{backgroundColor: "#111", color: "#fff"}}
                 placeholder="Email Address"
                 name="email"
                 value={email}
@@ -72,7 +73,7 @@ const Profile = ( {setAlert, modifyProfile, isAuthenticated, user} ) => {
             />
         </div>
         <div className="form-group">
-            <div className="lead">Current Password :</div>
+            <div className="lead text-primary b">Current Password :</div>
             <input
                 type="password"
                 placeholder="Current Password"
@@ -82,7 +83,7 @@ const Profile = ( {setAlert, modifyProfile, isAuthenticated, user} ) => {
             />
         </div>
         <div className="form-group">
-            <div className="lead">New Password :</div>
+            <div className="lead text-primary b">New Password :</div>
             <input
                 type="password"
                 placeholder="New Password"
@@ -92,7 +93,7 @@ const Profile = ( {setAlert, modifyProfile, isAuthenticated, user} ) => {
             />
         </div>
         <div className="form-group">
-            <div className="lead">New Confirm Password :</div>
+            <div className="lead text-primary b">New Confirm Password :</div>
             <input
                 type="password"
                 placeholder="Confirm Password"
@@ -101,7 +102,9 @@ const Profile = ( {setAlert, modifyProfile, isAuthenticated, user} ) => {
                 onChange={onChange}
             />
         </div>
-        <input type="submit" className="btn btn-success" value="Modify" />
+        <div className="text-center">
+            <input type="submit" className="btn btn-success" value="Modify" />
+        </div>
       </form>
     </section>
   );

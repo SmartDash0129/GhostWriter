@@ -45,6 +45,7 @@ const Register = ({ setAlert, register, isAuthenticated, user }) => {
       </p>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
+          <div className="lead text-primary b">Name :</div>
           <input
             type="text"
             placeholder="Name"
@@ -54,6 +55,7 @@ const Register = ({ setAlert, register, isAuthenticated, user }) => {
           />
         </div>
         <div className="form-group">
+          <div className="lead text-primary b">Email :</div>
           <input
             type="email"
             placeholder="Email Address"
@@ -67,6 +69,7 @@ const Register = ({ setAlert, register, isAuthenticated, user }) => {
           </small>
         </div>
         <div className="form-group">
+          <div className="lead text-primary b">Password :</div>          
           <input
             type="password"
             placeholder="Password"
@@ -76,6 +79,7 @@ const Register = ({ setAlert, register, isAuthenticated, user }) => {
           />
         </div>
         <div className="form-group">
+          <div className="lead text-primary b">Confirm Password :</div>
           <input
             type="password"
             placeholder="Confirm Password"
@@ -84,11 +88,14 @@ const Register = ({ setAlert, register, isAuthenticated, user }) => {
             onChange={onChange}
           />
         </div>
-        <input type="submit" className="btn btn-success" value="Register" />
+        <div className="text-center">
+          <input type="submit" className="btn btn-success" value="Register" />
+        </div>
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login" className="b">Sign In</Link>
       </p>
+      <br />
     </section>
   );
 };
