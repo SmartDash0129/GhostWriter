@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 const QuestionComponent = ( props ) => {
   // const auth = props.auth;
   return (
-    <div className="question-cotainer px-1">
-        {props.content}        
+    <div className="question-cotainer mx-1">
+        <textarea value={props.content} className="question-content p-1 b" readOnly/>
     </div>
   );
 };

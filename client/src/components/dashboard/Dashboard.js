@@ -25,6 +25,7 @@ const Dashboard = ( {auth, QA, getAnswer, cleanHistory, setAlert} ) => {
       setAlert('Please write the prompt', 'danger');
     }
     else {
+      setFormData({question: ''});
       getAnswer(question);
     }
   };
@@ -35,13 +36,12 @@ const Dashboard = ( {auth, QA, getAnswer, cleanHistory, setAlert} ) => {
   return (
     <section className="container">
       <h1 className="large text-primary text-center">Dashboard</h1>
-      {/* <p className="small">Welcome to <span className="lead text-primary b">{user.name}</span>!</p> */}
       <div className="dashboard-container"> 
         <div className="dashboard-left">
           <div className="text-center">
             <div className="my-2 b lead text-primary">What do you want?</div>
             <form onSubmit={onSubmit}>
-              <textarea className="prompt small" name="question" value={question} onChange={onChange}></textarea>
+              <textarea className="prompt small" name="question" value={question} onChange={onChange} autoFocus></textarea>
               <input type="submit" className="btn btn-success my-1" value="Writing" />
             </form>
             <input type="button" className="btn btn-success my-1" value="Clean History" onClick={clearHistory} />
@@ -49,12 +49,15 @@ const Dashboard = ( {auth, QA, getAnswer, cleanHistory, setAlert} ) => {
         </div>
         <div className="dashboard-right">
           {
-            QA.map(value => {
-              return <div><QuestionComponent content={value[0]} /> <AnswerComponent content={value[1]} /></div>
+            QA.map((value, index, array) => {
+              return (
+                <div>
+                  <QuestionComponent key={value[0]} content={value[0]} /> 
+                  <AnswerComponent key={value[1]} content={value[1]} />
+                </div>
+              )
             })
           }
-          {/* <QuestionComponent content="Question Testing" />
-          <AnswerComponent content="Answer Testing" /> */}
         </div>
       </div>
 

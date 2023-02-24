@@ -6,9 +6,11 @@ import Spinner from '../layout/Spinner';
 
 const PrivateRoute = ({
   component: Component,
-  auth: { isAuthenticated, loading }
+  auth: { isAuthenticated, loading },
+  waiting
 }) => {
-  if (loading) return <Spinner />;
+  if (loading || waiting) return <Spinner />;
+  
   if (isAuthenticated) return <Component />;
 
   return <Navigate to="/login" />;
@@ -19,7 +21,8 @@ PrivateRoute.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  auth: state.auth
+  auth: state.auth,
+  waiting: state.openai.waiting
 });
 
 export default connect(mapStateToProps)(PrivateRoute);

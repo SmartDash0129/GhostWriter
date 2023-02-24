@@ -1,14 +1,16 @@
 import api from '../utils/api';
 import { setAlert } from './alert';
-import { QA_ADD, QA_CLEAN } from './types';
+import { QA_ADD, QA_CLEAN, OPENAI_WAITING } from './types';
 
 export const getAnswer = (question) => async (dispatch) => {
     try {
+        dispatch({type: OPENAI_WAITING, payload: true});
         const res = await api.get(`/dashboard/${question}`);
+        dispatch({type: OPENAI_WAITING, payload: false});
         const answer = res.data;
         const payload = [question, answer];
         dispatch({type: QA_ADD, payload});
-        dispatch(setAlert("Your question sent successfully!", 'success'));
+        dispatch(setAlert("Written by AI successfully!", 'success'));
     } catch (err) {
         const errors = err.response.data.errors;
   

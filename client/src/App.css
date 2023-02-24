@@ -660,7 +660,7 @@ button {
 /* --------------- Scrollbar Decoration ------------ */
 /* width */
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.85rem;
 }
 
 /* Track */
@@ -806,7 +806,7 @@ img.inner-fill {
 }
 textarea.prompt {
   width: 90%;
-  background-color: #1d1818;
+  background-color: #242628bc;
   height: 150px;
   overflow-y: auto;
   border-radius: 0.5rem;
@@ -821,6 +821,31 @@ textarea.prompt {
   background-color:#201b37;
   width: 100%;
   border-radius: 0.4rem;
+}
+textarea.question-content {
+  background-color: #2c21309d;
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.25rem;
+  height: 5rem;
+  min-width: 100%;
+  max-width: 100%;
+  border-top: solid 0.15rem #444;
+  color: #bbb;
+}
+textarea.answer-content {
+  background-color: #351a3fd1;
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.2rem;
+  min-width: 100%;
+  max-width: 100%;
+  height: 15rem;
+  border-bottom: solid 0.12rem #444;
 }
 
 /* ------------------------------ Contact Manage ------------------------------- */
@@ -856,4 +881,12 @@ textarea.prompt {
   .contact-admin-right {
     width: 100%;
   }
+}
+
+/* ---------------------------- Spinner Setting -------------------------------- */
+.spinner-container {
+  display: flex;
+  height: 50rem;
+  justify-content: center;
+  align-items: center;
 }

@@ -13,3 +13,5 @@ export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';
 
 export const QA_ADD = 'QA_ADD';
 export const QA_CLEAN = 'QA_CLEAN';
+
+export const OPENAI_WAITING = 'OPENAI_WAITING';

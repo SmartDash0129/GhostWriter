@@ -4,10 +4,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const AnswerComponent = ( props ) => {
-    // const auth = props.auth;
     return (
-        <div className="answer-container px-1">
-            {props.content}
+        <div className="answer-container mx-1">
+          <textarea value={props.content} className="answer-content p-1" readOnly/>
         </div>
     );
 };
