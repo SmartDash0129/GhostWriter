@@ -55,7 +55,7 @@ const Navbar = ({ auth, logout }) => {
         </Link>
       </li>
       <li>
-        <Link to="/tuning_data">
+        <Link to="/fine_tuning">
           <i className="fa fa-sticky-note" />{' '}
           <span className="hide-sm">Fine-Tuning Data</span>
         </Link>

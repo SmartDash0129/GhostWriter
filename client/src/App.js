@@ -9,8 +9,10 @@ import Dashboard from './components/dashboard/Dashboard';
 
 import About from './components/static/About';
 import Contact from './components/static/Contact';
+import ContactAdmin from './components/contact-admin/ContactAdmin';
 import Pricing from './components/pricing/Pricing';
 import Profile from './components/profile/Profile';
+import FineTuning from './components/finetuning/FineTuning';
 
 import Footer from './components/layout/Footer';
 import NotFound from './components/layout/NotFound';
@@ -53,8 +55,10 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="contact_admin" element={<ContactAdmin />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="fine_tuning" element={<FineTuning />} />
           <Route
             path="dashboard"
             element={<PrivateRoute component={Dashboard} />}

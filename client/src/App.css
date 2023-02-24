@@ -206,6 +206,7 @@ img {
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
+  border-radius: 1.1rem;
 }
 
 .btn-primary,
@@ -781,7 +782,7 @@ img.inner-fill {
 }
 .dashboard-left {
   width: 30%;
-  border-right: solid 0.2rem #888;
+  border-right: solid 0.2rem #111;
 }
 .dashboard-right {
   width: 70%;
@@ -820,4 +821,39 @@ textarea.prompt {
   background-color:#201b37;
   width: 100%;
   border-radius: 0.4rem;
+}
+
+/* ------------------------------ Contact Manage ------------------------------- */
+.contact-admin-container {
+  display: flex;
+  direction: row;
+  /* justify-content: space-around; */
+  width: 100%;
+  max-height: 100%;
+  background-color: #231d3ec2;
+  border-radius: 1rem;
+}
+.contact-admin-left {
+  width: 50%;
+  border-right: solid 0.2rem #111;
+}
+.contact-admin-right {
+  width: 50%;
+  height: 660px;
+  /* max-height: 750px; */
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .contact-admin-container {
+      flex-direction: column;       
+  }
+  .contact-admin-left {
+    border-bottom: solid 0.2rem #888;
+    border-right: none;
+    width: 100%;
+  }
+  .contact-admin-right {
+    width: 100%;
+  }
 }
