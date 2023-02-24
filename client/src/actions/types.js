@@ -15,3 +15,8 @@ export const QA_ADD = 'QA_ADD';
 export const QA_CLEAN = 'QA_CLEAN';
 
 export const OPENAI_WAITING = 'OPENAI_WAITING';
+
+export const CONTACT_LOADED = 'CONTACT_LOADED';
+export const CONTACT_DELETE = 'CONTACT_DELETE';
+export const CONTACT_UPDATE = 'CONTACT_UPDATE';
+export const CONTACT_CLEAR = 'CONTACT_CLEAR';
