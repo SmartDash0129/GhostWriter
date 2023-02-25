@@ -8,7 +8,7 @@ router.get('/', auth, async (req, res) => {
     try {
     
         const contacts = await Contact.find({});
-        console.log(contacts);
+        // console.log("result", contacts);
         res.json(contacts);
 
     } catch (err) {

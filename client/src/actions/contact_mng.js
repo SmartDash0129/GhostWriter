@@ -6,8 +6,11 @@ import { CONTACT_CLEAR, CONTACT_DELETE, CONTACT_LOADED } from './types';
 export const loadContact = () => async (dispatch) => {
     try {
         const res = await api.get('/contact_admin');
-        console.log(res);
-  
+        // console.log(res.data);
+        const payload = res.data;
+        console.log(payload);
+        dispatch(CONTACT_LOADED, payload);
+        
         dispatch(setAlert("All contact messages were loaded successfully!", 'success'));
     } catch (err) {
         const errors = err.response.data.errors;
