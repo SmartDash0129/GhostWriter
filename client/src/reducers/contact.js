@@ -17,7 +17,7 @@ import {
         case CONTACT_LOADED:
             return {
                 ...state,
-                contacts: [...state.contacts, payload]
+                contacts: payload
             }
         case CONTACT_DELETE:
             return {

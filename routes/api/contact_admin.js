@@ -7,8 +7,8 @@ const Contact = require('../../models/Contact');
 router.get('/', auth, async (req, res) => {
     try {
     
-        const contacts = await Contact.find({});
-        // console.log("result", contacts);
+        // const contacts = await Contact.find({});
+        const contacts = "dslfkje";
         res.json(contacts);
 
     } catch (err) {

@@ -8,8 +8,7 @@ export const loadContact = () => async (dispatch) => {
         const res = await api.get('/contact_admin');
         // console.log(res.data);
         const payload = res.data;
-        console.log(payload);
-        dispatch(CONTACT_LOADED, payload);
+        dispatch({type: CONTACT_LOADED, payload});
         
         dispatch(setAlert("All contact messages were loaded successfully!", 'success'));
     } catch (err) {
