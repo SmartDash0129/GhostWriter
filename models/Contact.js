@@ -14,6 +14,9 @@ const ContactSchema = new Schema({
     type: String,
     required: true
   },
+  reply_message: {
+    type: String
+  },
   status: {
     type: Boolean,
     default: false

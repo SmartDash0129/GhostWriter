@@ -55,10 +55,22 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="contact_admin" element={<ContactAdmin />} />
-          <Route path="pricing" element={<Pricing />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="fine_tuning" element={<FineTuning />} />
+          <Route
+            path="pricing"
+            element={<PrivateRoute component={Pricing} />}
+          />
+          <Route
+            path="profile"
+            element={<PrivateRoute component={Profile} />}
+          />
+          <Route
+            path="fine_tuning"
+            element={<PrivateRoute component={FineTuning} />}
+          />
+          <Route
+            path="contact_admin"
+            element={<PrivateRoute component={ContactAdmin} />}
+          />
           <Route
             path="dashboard"
             element={<PrivateRoute component={Dashboard} />}

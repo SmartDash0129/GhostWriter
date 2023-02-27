@@ -852,18 +852,17 @@ textarea.answer-content {
 .contact-admin-container {
   display: flex;
   direction: row;
-  /* justify-content: space-around; */
   width: 100%;
   max-height: 100%;
   background-color: #231d3ec2;
   border-radius: 1rem;
 }
 .contact-admin-left {
-  width: 50%;
+  width: 40%;
   border-right: solid 0.2rem #111;
 }
 .contact-admin-right {
-  width: 50%;
+  width: 60%;
   height: 660px;
   /* max-height: 750px; */
   overflow-y: auto;
@@ -889,4 +888,50 @@ textarea.answer-content {
   height: 50rem;
   justify-content: center;
   align-items: center;
+}
+
+/* ---------------------------- Table Setting ------------------------------- */
+table.contact {
+  width: 100%;
+}
+table, tr, th, td {
+  border: solid 1px #343a40;
+  border-collapse: collapse;
+  text-align: center;
+}
+th {
+  background-color: #100633;
+  color: var(--primary-color);
+}
+td {
+  color: var(--light-color);
+}
+tr {
+  background-color:rgba(26, 23, 23, 0.2);
+}
+
+td.msg:hover, td.del:hover {
+  background-color: rgb(56, 47, 77);
+  cursor: pointer;
+}
+
+/* ----------------------- Contact Message Manage Setting  --------------------- */
+textarea.msg {
+  background-color: #150d3030;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 210px;
+  border: none;
+  max-width: 100%;
+  min-width: 100%;
+  color: var(--light-color);
+}
+textarea.reply {
+  background-color:rgb(39, 33, 50);
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 170px;
+  color: white;
+  max-width: 100%;
+  min-width: 100%;
 }
