@@ -57,9 +57,15 @@ const Navbar = ({ auth, logout }) => {
       <li>
         <Link to="/fine_tuning">
           <i className="fa fa-sticky-note" />{' '}
-          <span className="hide-sm">Fine-Tuning Data</span>
+          <span className="hide-sm">Training Data</span>
         </Link>
       </li>
+      {/* <li>
+        <Link to="/model">
+          <i className="fa fa-sticky-note" />{' '}
+          <span className="hide-sm">Fine-Tuned Model</span>
+        </Link>
+      </li> */}
       <li>
         <Link to="/profile">
           <i className="fas fa-user" />{' '}
