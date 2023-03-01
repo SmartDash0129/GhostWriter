@@ -162,8 +162,15 @@ img {
 }
 .my-3 {
   margin: 3rem 0;
+}.my-4 {
+  margin: 4rem 0;
 }
-
+.my-6 {
+  margin: 6rem 0;
+}
+.my-10 {
+  margin: 10rem 0;
+}
 .btn {
   display: inline-block;
   background: var(--light-color);
@@ -934,4 +941,33 @@ textarea.reply {
   color: white;
   max-width: 100%;
   min-width: 100%;
+}
+
+/*  ------------------------------------- Pricing Card Setting  ---------------------------------------- */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.card{
+  width: 50%;
+  background-color: #100633;
+  border-radius: 0.5rem;
+  border: solid 0.2rem #0077b5;
+}
+.card-input-container {
+  background-color: #181622;
+  width: 100%;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border-radius: 1rem;
+  border-top: solid 0.1rem #aaa;
+}
+@media screen and (max-width: 700px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
 }

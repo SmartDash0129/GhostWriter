@@ -25,6 +25,10 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  priceEnabled: {
+    type: Boolean,
+    default: false
+  },
   date: {
     type: Date,
     default: Date.now
