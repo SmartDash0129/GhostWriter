@@ -1,4 +1,4 @@
-import { useState, useEffece } from 'react';
+import { useState } from 'react';
 import {useDispatch} from 'react-redux';
 
 import { setAlert } from '../../actions/alert';
@@ -12,7 +12,7 @@ const CardInput = ({setAlert}) => {
     const dispatch = useDispatch();
     const [formData, setFormData] = useState({
         email: '',
-        cardNumber: '4242 4242 4242 4242',
+        cardNumber: '', //4242 4242 4242 4242
         expMonth: '',
         expYear: '',
         cvc: ''
