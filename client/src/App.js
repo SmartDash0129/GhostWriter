@@ -13,6 +13,7 @@ import ContactAdmin from './components/contact-admin/ContactAdmin';
 import Pricing from './components/pricing/Pricing';
 import Profile from './components/profile/Profile';
 import FineTuning from './components/finetuning/FineTuning';
+import Embedding from './components/embedding/Embedding';
 import Model from './components/finetuning/Model';
 
 import Footer from './components/layout/Footer';
@@ -65,8 +66,8 @@ const App = () => {
             element={<PrivateRoute component={Profile} />}
           />
           <Route
-            path="fine_tuning"
-            element={<PrivateRoute component={FineTuning} />}
+            path="embedding"
+            element={<PrivateRoute component={Embedding} />}
           />
           <Route
             path="model"

@@ -17,6 +17,7 @@
     "bcryptjs": "^2.4.3",
     "child_process": "^1.0.2",
     "client": "file:client",
+    "compute-cosine-similarity": "^1.0.0",
     "config": "^3.3.3",
     "dotenv": "^16.0.3",
     "express": "^4.17.1",

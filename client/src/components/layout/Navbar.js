@@ -55,9 +55,9 @@ const Navbar = ({ auth, logout }) => {
         </Link>
       </li>
       <li>
-        <Link to="/fine_tuning">
+        <Link to="/embedding">
           <i className="fa fa-sticky-note" />{' '}
-          <span className="hide-sm">Training Data</span>
+          <span className="hide-sm">Embedding Data</span>
         </Link>
       </li>
       {/* <li>

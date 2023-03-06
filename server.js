@@ -18,6 +18,7 @@ app.use('/api/dashboard', require('./routes/api/dashboard'));
 app.use('/api/contact_admin', require('./routes/api/contact_admin'));
 app.use('/api/model', require('./routes/api/model'));
 app.use('/api/pricing', require('./routes/api/pricing'));
+app.use('/api/embedding', require('./routes/api/embedding'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
