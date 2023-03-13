@@ -22,41 +22,6 @@ const gpt3_embedding = async (content) => {
     return response.data.data[0].embedding;
 };
 
-// const gpt3_completion = async (
-//     prompt,
-//     engine = "text-davinci-003",
-//     temp = 1,
-//     top_p = 1.0,
-//     tokens = 2000,
-//     freq_pen = 0.25,
-//     pres_pen = 0.0,
-//     stop = ["<<END>>"]
-//   ) => {
-//     const max_retry = 5;
-//     let retry = 0;
-//     while (true) {
-//       try {
-//         const res = await openai.createCompletion({
-//           model: engine,
-//           prompt: prompt,
-//           temperature: temp,
-//           max_tokens: tokens,
-//           top_p: top_p,
-//           frequency_penalty: freq_pen,
-//           presence_penalty: pres_pen,
-//         });
-//         let text = res.data.choices[0].text.trim();
-//         text = text.replace(/\s+/g, " ");
-//         return text;
-//       } catch (err) {
-//         retry++;
-//         if (retry >= max_retry) return "GPT3 error: %s" % err;
-//         console.log("Error communicating with OpenAI:", err);
-//         setTimeout(() => {}, 1);
-//       }
-//     }
-//   };
-
 router.get('/:question', auth, async (req, res) => {
     try {
         let prompt = req.params.question;
