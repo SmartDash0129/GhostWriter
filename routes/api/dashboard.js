@@ -83,15 +83,25 @@ router.get('/:question', auth, async (req, res) => {
                 let ordered = scores.sort((a, b) => b.score - a.score);
                 
                 const resultElement = ordered[0];
-                const promptNew = prompt + "\nUse the following passage.\n" + "{" + resultElement.content.song + "}";
+                // const promptNew = prompt + "\nUse the following passage.\n" + "{" + resultElement.content.song + "}";
+                const promptNew = "Write a new lyric song based on the following passage : " + resultElement.content.song;
 
-                const response = await openai.createCompletion({
-                    model: "text-davinci-003",
-                    prompt: promptNew,
-                    temperature: 1.0,
-                    max_tokens: 2000,
+                // const response = await openai.createCompletion({
+                //     model: "text-davinci-003",
+                //     prompt: promptNew,
+                //     temperature: 1.0,
+                //     max_tokens: 2000,
+                // });
+                // let answer = response.data.choices[0].text.trim();
+
+                const completion = await openai.createChatCompletion({
+                  model: "gpt-3.5-turbo",
+                  messages: [
+                    {role: "system", content: "You are a ghost writer"},
+                    {role: "user", content: promptNew}],
                 });
-                let answer = response.data.choices[0].text.trim();
+                let answer = completion.data.choices[0].message.content;
+
                 // res.json(promptNew);
                 res.json(answer);
                 // const resultElement = ordered[Math.floor(Math.random() * 3)];
